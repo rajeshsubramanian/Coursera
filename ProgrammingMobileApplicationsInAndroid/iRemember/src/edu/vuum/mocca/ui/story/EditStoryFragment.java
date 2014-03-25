@@ -240,10 +240,11 @@ public class EditStoryFragment extends Fragment {
 		try {
 			date = StoryData.FORMAT.parse(storyTimeEditable.toString());
 		} catch (ParseException e1) {
-			Log.e("CreateStoryFragment", "Date was not parsable, reverting to current time");
+			Log.e("CreateStoryFragment",
+					"Date was not parsable, reverting to current time");
 			date = new Date();
 		}
-		
+
 		long loginId = 0;
 		long storyId = 0;
 		String title = "";
@@ -303,7 +304,8 @@ public class EditStoryFragment extends Fragment {
 			// set the EditTexts to the current values
 			titleET.setText(String.valueOf(storyData.title).toString());
 			bodyET.setText(String.valueOf(storyData.body).toString());
-			audioLinkET.setText("file:///" + String.valueOf(storyData.audioLink).toString());
+			audioLinkET.setText("file:///"
+					+ String.valueOf(storyData.audioLink).toString());
 			videoLinkET.setText(String.valueOf(storyData.videoLink).toString());
 			imageNameET.setText(String.valueOf(storyData.imageName).toString());
 			imageMetaDataET.setText(String.valueOf(storyData.imageLink)

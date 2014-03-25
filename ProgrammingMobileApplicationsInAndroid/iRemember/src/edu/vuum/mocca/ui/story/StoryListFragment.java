@@ -150,23 +150,24 @@ public class StoryListFragment extends ListFragment {
 
 		filterET = (EditText) view
 				.findViewById(R.id.story_listview_tags_filter);
-		
+
 		filterET.addTextChangedListener(new TextWatcher() {
-			
+
 			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
+			public void onTextChanged(CharSequence s, int start, int before,
+					int count) {
 				updateStoryData();
 			}
-			
+
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
 					int after) {
-				
+
 			}
-			
+
 			@Override
 			public void afterTextChanged(Editable s) {
-				
+
 			}
 		});
 
@@ -181,7 +182,7 @@ public class StoryListFragment extends ListFragment {
 	// This function should update the ListView to match the specified
 	// filter text.
 	//
-	
+
 	public void updateStoryData() {
 		Log.d(LOG_TAG, "updateStoryData");
 		try {
@@ -195,7 +196,7 @@ public class StoryListFragment extends ListFragment {
 			ArrayList<StoryData> currentList2 = resolver.queryStoryData(null,
 					MoocSchema.Story.Cols.TITLE + " LIKE ? ",
 					new String[] { filterWord }, null);
-			
+
 			StoryData.addAll(currentList2);
 			aa.notifyDataSetChanged();
 		} catch (Exception e) {
@@ -203,7 +204,7 @@ public class StoryListFragment extends ListFragment {
 					"Error connecting to Content Provider" + e.getMessage());
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	@Override
@@ -235,10 +236,11 @@ public class StoryListFragment extends ListFragment {
 			}
 		});
 	}
-	
+
 	/*
-	 * Refresh story list on fragment resume (rather than having to manually click a refresh button)
-	 * (non-Javadoc)
+	 * Refresh story list on fragment resume (rather than having to manually
+	 * click a refresh button) (non-Javadoc)
+	 * 
 	 * @see android.support.v4.app.Fragment#onResume()
 	 */
 	@Override

@@ -442,9 +442,9 @@ public class MoocResolver {
 	}
 
 	/**
-	 * Updates all TagsData stored with the provided TagsData's 'KEY_ID'
-	 * (should only be 1 row of data in the content provider, but content
-	 * provider implementation will update EVERY row that matches.)
+	 * Updates all TagsData stored with the provided TagsData's 'KEY_ID' (should
+	 * only be 1 row of data in the content provider, but content provider
+	 * implementation will update EVERY row that matches.)
 	 * 
 	 * @param data
 	 * @return number of rows altered

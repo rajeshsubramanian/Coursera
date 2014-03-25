@@ -74,8 +74,9 @@ import android.os.Parcelable;
  */
 public class StoryData implements Parcelable {
 
-	public final static SimpleDateFormat FORMAT = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-	
+	public final static SimpleDateFormat FORMAT = new SimpleDateFormat(
+			"yyyy-MM-dd", Locale.getDefault());
+
 	public final long KEY_ID;
 	public long loginId;
 	public long storyId;
@@ -150,8 +151,8 @@ public class StoryData implements Parcelable {
 	 */
 	public StoryData(long KEY_ID, long loginId, long storyId, String title,
 			String body, String audioLink, String videoLink, String imageName,
-			String imageLink, String tags, long creationTime,
-			long storyTime, double latitude, double longitude) {
+			String imageLink, String tags, long creationTime, long storyTime,
+			double latitude, double longitude) {
 		this.KEY_ID = KEY_ID;
 		this.loginId = loginId;
 		this.storyId = storyId;
@@ -196,8 +197,8 @@ public class StoryData implements Parcelable {
 	 */
 	public StoryData clone() {
 		return new StoryData(loginId, storyId, title, body, audioLink,
-				videoLink, imageName, imageLink, tags, creationTime,
-				storyTime, latitude, longitude);
+				videoLink, imageName, imageLink, tags, creationTime, storyTime,
+				latitude, longitude);
 	}
 
 	// these are for parcelable interface

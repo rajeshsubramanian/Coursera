@@ -29,7 +29,7 @@ public class DatePickerFragment extends DialogFragment implements
 
 	@Override
 	public void onDateSet(DatePicker view, int year, int monthOfYear,
-			int dayOfMonth) {		
+			int dayOfMonth) {
 		CreateStoryFragment.setStringDate(year, monthOfYear, dayOfMonth);
 	}
 
