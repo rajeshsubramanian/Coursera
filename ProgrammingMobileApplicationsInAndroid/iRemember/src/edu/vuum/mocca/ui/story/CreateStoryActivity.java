@@ -268,7 +268,7 @@ public class CreateStoryActivity extends StoryActivityBase {
 		// TODO - Add the filename to the Intent as an extra. Use the
 		// Intent-extra name
 		// from the MediaStore class, EXTRA_OUTPUT
-		intent.putExtra(MediaStore.EXTRA_OUTPUT, imageFile.getPath());
+		intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(imageFile));
 
 		// TODO - Start a new activity for result, using the new intent and the
 		// request
@@ -296,7 +296,7 @@ public class CreateStoryActivity extends StoryActivityBase {
 		// TODO - Add the filename to the Intent as an extra. Use the
 		// Intent-extra name
 		// from the MediaStore class, EXTRA_OUTPUT
-		intent.putExtra(MediaStore.EXTRA_OUTPUT, videoFile.getPath());
+		intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(videoFile));
 
 		// TODO - Specify as an extra that the video quality should be HIGH. Use
 		// the
